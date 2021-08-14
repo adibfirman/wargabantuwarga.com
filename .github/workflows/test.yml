@@ -87,7 +87,9 @@ jobs:
       - uses: actions/cache@v1
         id: restore-deps
         with:
-          path: "."
+          path: |
+            .
+            ~/.cache/Cypress
           key: ${{ github.sha }}
       - uses: actions/setup-node@v1
         with:
