@@ -20,7 +20,9 @@ jobs:
       - uses: actions/cache@v1
         id: cache-deps
         with:
-          path: "."
+          path: |
+            .
+            ~/.cache/Cypress
           key: ${{ github.sha }}
 
   lint:
